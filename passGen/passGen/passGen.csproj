@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bussinessLogic.cs" />
+    <Compile Include="genPassword.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
