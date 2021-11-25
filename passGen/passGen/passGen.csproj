@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>lock.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\lock.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,7 +89,7 @@
     <None Include="Resources\copy.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lock.ico" />
+    <Content Include="Resources\lock.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
