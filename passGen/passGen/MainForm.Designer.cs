@@ -69,7 +69,7 @@ namespace passGen
             this.MainTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.MainTable.Size = new System.Drawing.Size(284, 251);
+            this.MainTable.Size = new System.Drawing.Size(284, 261);
             this.MainTable.TabIndex = 0;
             // 
             // passLength_lbl
@@ -233,6 +233,7 @@ namespace passGen
             this.Copy_btn.Text = "Copy";
             this.Copy_btn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Copy_btn.UseVisualStyleBackColor = true;
+            this.Copy_btn.Click += new System.EventHandler(this.Copy_btn_Click);
             // 
             // MainForm
             // 
@@ -240,7 +241,7 @@ namespace passGen
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(284, 251);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.MainTable);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
