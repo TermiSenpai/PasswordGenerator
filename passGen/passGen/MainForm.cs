@@ -29,6 +29,8 @@ namespace passGen
 
         private void GenPass_btn_Click(object sender, EventArgs e) => genPass();
 
+        private void Copy_btn_Click(object sender, EventArgs e) => copy();
+
         #endregion
 
         #region private methods
@@ -73,10 +75,15 @@ namespace passGen
             generatedPass.Text = pass;
         }
 
-
         #endregion
 
         #region copyButton
+
+        private void copy()
+        {
+            string pass = generatedPass.Text;
+            Clipboard.SetText(pass);
+        }
 
         #endregion
 
