@@ -123,6 +123,7 @@ namespace passGen
             this.GenPass_btn.TabIndex = 3;
             this.GenPass_btn.Text = "Generar";
             this.GenPass_btn.UseVisualStyleBackColor = true;
+            this.GenPass_btn.Click += new System.EventHandler(this.GenPass_btn_Click);
             // 
             // options_btn
             // 

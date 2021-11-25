@@ -12,6 +12,7 @@ namespace passGen
 {
     public partial class MainForm : Form
     {
+        bussinessLogicLayer _bussinessLogicLayer = new bussinessLogicLayer();
         private int heightChange = 60;
         public MainForm()
         {
@@ -25,6 +26,8 @@ namespace passGen
         private void options_btn_Click(object sender, EventArgs e) => optionsClick();
 
         private void trackBar_Scroll(object sender, EventArgs e) => changeLengthValue();
+
+        private void GenPass_btn_Click(object sender, EventArgs e) => genPass();
 
         #endregion
 
@@ -62,6 +65,15 @@ namespace passGen
 
         #region genButton
 
+        private void genPass()
+        {
+            string pass;
+            pass = _bussinessLogicLayer.genPass(trackBar.Value);
+
+            generatedPass.Text = pass;
+        }
+
+
         #endregion
 
         #region copyButton
@@ -70,6 +82,6 @@ namespace passGen
 
         #endregion
 
-
+        
     }
 }
