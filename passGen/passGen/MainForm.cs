@@ -16,7 +16,7 @@ namespace passGen
         private int heightChange = 110;
         public MainForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         #region events
@@ -76,7 +76,15 @@ namespace passGen
         private void genPass()
         {
             string pass;
-            pass = _bussinessLogicLayer.genPass(trackBar.Value);
+
+            if (Lower_check.Checked && Number_check.Checked && Symbol_check.Checked && Upper_check.Checked)
+            {
+                pass = _bussinessLogicLayer.genPass(trackBar.Value);
+            }
+            else
+            {
+                pass = _bussinessLogicLayer.genPass(trackBar.Value, Symbol_check.Checked, Number_check.Checked, Upper_check.Checked, Lower_check.Checked);
+            }
 
             generatedPass.Text = pass;
         }
@@ -92,7 +100,7 @@ namespace passGen
         }
 
         #endregion
-        
+
         private void setInitSize()
         {
             this.Width = 260;
@@ -102,6 +110,6 @@ namespace passGen
         #endregion
 
 
-        
+
     }
 }
