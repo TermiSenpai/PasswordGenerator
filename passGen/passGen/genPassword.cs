@@ -34,6 +34,31 @@ namespace passGen
         public string genPass(int passLenght, bool s, bool n, bool u, bool l)
         {
             _password = string.Empty;
+
+            string chars = string.Empty;
+
+            if (s)
+                chars += _symbols;
+            if (n)
+                chars += _numbers;
+            if (u)
+                chars += _upperCase;
+            if (l)
+                chars += _lowerCase;
+
+
+            for (int i = 0; i < passLenght; i++)
+            {
+                if (chars == string.Empty)
+                {
+                    _password = "Check an option and try again";
+                    break;
+                }
+
+                _word = chars[_r.Next(chars.Length)];
+                _password += _word.ToString();
+            }
+
             return _password;
         }
         
