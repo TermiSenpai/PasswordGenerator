@@ -21,6 +21,13 @@ namespace passGen
 
         #region events
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            closeOptions();
+            changeLengthValue();
+            setInitSize();
+        }
+
         private void options_btn_Click(object sender, EventArgs e) => optionsClick();
 
         private void trackBar_Scroll(object sender, EventArgs e) => changeLengthValue();
@@ -84,22 +91,17 @@ namespace passGen
             Clipboard.SetText(pass);
         }
 
-
         #endregion
-
-        #endregion
-
+        
         private void setInitSize()
         {
             this.Width = 260;
             this.Height = 260;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            closeOptions();
-            changeLengthValue();
-            setInitSize();
-        }
+        #endregion
+
+
+        
     }
 }
