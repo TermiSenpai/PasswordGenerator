@@ -15,8 +15,9 @@ namespace passGen
         [STAThread]
         static async Task Main()
         {
+            /*
             using (var mgr = new UpdateManager("https://github.com/TermiSenpai/PasswordGenerator/releases/latest"))
-                await mgr.UpdateApp();
+                await mgr.UpdateApp(); */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
