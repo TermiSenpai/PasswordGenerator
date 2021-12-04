@@ -78,13 +78,10 @@ namespace passGen
             string pass;
 
             if (Lower_check.Checked && Number_check.Checked && Symbol_check.Checked && Upper_check.Checked)
-            {
                 pass = _bussinessLogicLayer.genPass(trackBar.Value);
-            }
+
             else
-            {
                 pass = _bussinessLogicLayer.genPass(trackBar.Value, Symbol_check.Checked, Number_check.Checked, Upper_check.Checked, Lower_check.Checked);
-            }
 
             generatedPass.Text = pass;
         }
