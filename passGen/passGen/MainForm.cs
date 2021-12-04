@@ -13,12 +13,10 @@ namespace passGen
     public partial class MainForm : Form
     {
         bussinessLogicLayer _bussinessLogicLayer = new bussinessLogicLayer();
-        private int heightChange = 60;
+        private int heightChange = 110;
         public MainForm()
         {
-            InitializeComponent();
-            closeOptions();
-            changeLengthValue();
+            InitializeComponent();            
         }
 
         #region events
@@ -47,6 +45,7 @@ namespace passGen
                 case false:
                     openOptions();
                     Height += heightChange;
+
                     break;
             }
         }
@@ -85,10 +84,22 @@ namespace passGen
             Clipboard.SetText(pass);
         }
 
-        #endregion
 
         #endregion
 
-        
+        #endregion
+
+        private void setInitSize()
+        {
+            this.Width = 260;
+            this.Height = 260;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            closeOptions();
+            changeLengthValue();
+            setInitSize();
+        }
     }
 }
