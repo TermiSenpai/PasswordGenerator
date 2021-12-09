@@ -90,7 +90,20 @@ namespace passGen
 
         #region copyButton
 
-        private void copy() => Clipboard.SetText(generatedPass.Text);
+        private void copy()
+        {
+
+            try
+            {
+                Clipboard.SetText(generatedPass.Text);
+            }
+            catch (ArgumentNullException)
+            {
+                generatedPass.Text = string.Empty;
+            }
+        }
+            
+
 
         #endregion
 
